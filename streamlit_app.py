@@ -104,7 +104,7 @@ def print_report(report_path: str):
 
 # ------------------------------------- GRAFICAS ------------------------------------ #
 def print_cross_validation_analysis():
-    st.title("Validación Cruzada de Datos")
+    st.title("Validación Cruzada de SKUs y Proveedores")
 
     # Cargar todos los datasets limpios
     df_productos = load_data(productos_clean)
@@ -232,7 +232,7 @@ def print_cross_validation_analysis():
 
 
 def print_sku_network():
-    st.subheader("Red de relaciones Base_SKU -> Variant_SKU")
+    st.title("Red de relaciones Base_SKU -> Variant_SKU")
 
     # Cargar datos
     df_relacion = load_data(relacion_variantes_clean)
