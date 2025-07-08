@@ -45,9 +45,9 @@ No se modificó.
 ### 📝 Justificación
 
 Se realizaron pocos cambios debido a la naturaleza de los datos y la intencionalidad de su formato final.  
-Se estandarizó el formato de los teléfonos, y **no se creó una columna para extensiones** ya que sin la extensión el número no tiene utilidad.
+Se estandarizó el formato de los teléfonos, y no se creó una columna para extensiones ya que sin la extensión el número no tiene utilidad.
 
-Se contempló separar el campo de `Region` a subregiones, pero **se necesitaría más diálogo** ya que para la mayoría de las entradas se proporciona una sola región no estandarizada: una ciudad, un país, un estado, o un continente.
+Se contempló separar el campo de `Region` a subregiones, pero se necesitaría más diálogo ya que para la mayoría de las entradas se proporciona una sola región no estandarizada: una ciudad, un país, un estado, o un continente.
 
 ---
 
@@ -90,12 +90,12 @@ Se contempló separar el campo de `Region` a subregiones, pero **se necesitaría
 ### 📝 Justificación
 
 Se agregó un identificador `Product_ID` manteniendo el formato de otros campos como `Provider_ID` (empezando en 1001).  
-Se normalizaron los nombres de productos, al igual que los precios. Aunque no se especifica la moneda, se asume **USD** debido a la escala global del caso.
+Se normalizaron los nombres de productos, al igual que los precios. Aunque no se especifica la moneda, se asume USD debido a la escala global del caso.
 
-Se limpiaron las columnas `Category` y `Subcategory`, también haciendo un **merge con `categorías_maestras`** para asignar su código `ERP_Code`.  
-En cuanto a `Stock`, **no se eliminaron valores negativos**, ya que podrían representar productos faltantes en órdenes colocadas.
+Se limpiaron las columnas `Category` y `Subcategory`, también haciendo un merge con `categorías_maestras` para asignar su código `ERP_Code`.  
+En cuanto a `Stock`, no se eliminaron valores negativos, ya que podrían representar productos faltantes en órdenes colocadas.
 
-La columna `Last_Update` fue estandarizada al formato **YYYY-MM-DD**.
+La columna `Last_Update` fue estandarizada al formato YYYY-MM-DD.
 
 ---
 
@@ -123,9 +123,9 @@ La columna `Last_Update` fue estandarizada al formato **YYYY-MM-DD**.
 ### 📝 Justificación
 
 Se estandarizó el formato de los campos para asegurar consistencia (por ejemplo, tallas y colores).  
-El campo `Active` fue convertido a tipo **booleano**, ya que representa una opción binaria (activo/inactivo).
+El campo `Active` fue convertido a tipo booleano, ya que representa una opción binaria (activo/inactivo).
 
-Se detectaron **filas duplicadas**, las cuales fueron **marcadas en el dashboard** en lugar de ser eliminadas automáticamente.  
+Se detectaron filas duplicadas, las cuales fueron marcadas en el dashboard en lugar de ser eliminadas automáticamente.  
 Se eligió escribir los colores en inglés para mantener la coherencia con el sistema y facilitar futuras integraciones.
 
 ---
@@ -162,6 +162,6 @@ Se eligió escribir los colores en inglés para mantener la coherencia con el si
 Se agregó una nueva columna `Returned` para facilitar la detección de devoluciones sin depender de interpretar valores negativos en `Quantity_Sold`.
 
 El campo `Payment_Method` se estandarizó en inglés para mantener coherencia con el sistema general.  
-No se alteraron los valores negativos en `Total_Amount`, ya que pueden reflejar **devoluciones, reembolsos o pérdidas**.
+No se alteraron los valores negativos en `Total_Amount`, ya que pueden reflejar devoluciones, reembolsos o pérdidas.
 
-Las fechas se limpiaron y estandarizaron en formato **YYYY-MM-DD**.
+Las fechas se limpiaron y estandarizaron en formato YYYY-MM-DD.
